@@ -2263,6 +2263,10 @@ input, select, textarea {
 		min-height: 80vh;
 	}
 
+	#features2 header.style1 p {
+		text-align: left;
+	}
+
 	#features ul.actions {
 		margin-top: 5em;
 	}
