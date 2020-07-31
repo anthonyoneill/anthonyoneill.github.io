@@ -1463,6 +1463,16 @@ input, select, textarea {
 			line-height: 1.5em;
 		}
 
+		header.style1 h3 {
+			padding-top: 25px;
+			text-align: left;
+			font-size: 1.5em;
+		}
+
+		header.style1 ol {
+			text-align: left;
+		}
+
 		header.style1 p {
 			/*color: #b1b4b9;*/
 			/*color: #909396;*/
