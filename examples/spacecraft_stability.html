@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Oak Hamilton - Mathematical Consultants</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li class="current"><a href="https://www.oakhamilton.co.uk">Home</a></li>
+				<li>
+					<a href="https://www.oakhamilton.co.uk#services">Services</a>
+					<ul>
+						<li><a href="./mathematical_modelling.html">Mathematical Modelling</a></li>
+						<li><a href="./data_analysis.html">Data Analysis</a>
+							<!--ul>
+								<li><a href="#">Data Visualisation</a></li>
+							</ul-->
+						</li>
+						<li><a href="./software_development.html">Software Development</a></li>
+						<li><a href="./risk_assessment.html">Risk Assessment</a></li>
+					</ul>
+				</li>
+				<li><a href="https://www.oakhamilton.co.uk#examples">Examples</a></li>
+				<li><a href="https://www.oakhamilton.co.uk#about">About</a></li>
+				<li><a href="https://www.oakhamilton.co.uk#footer">Contact</a></li>
+			</ul>
+		</nav>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="container">
+
+							<section id="features2">
+								<header class="style1">
+									<h2>Spacecraft stability</h2>
+
+									<p>
+										A simple example of perturbation techniques is the stability of a circular 
+										orbit to small disturbances. If a satellite is in a circular 
+										orbit around the centre of the earth and is given a small radial velocity 
+										will the satellite be thrown into space, crash into the earth or is the 
+										orbit stable? General relativity is not required in order to develop a 
+										basic model of this scenario, the Newtonian model of gravity will suffice. 
+									</p>
+
+									<h3>Newtonian model</h3>
+
+									<p>
+										The motion of the satellite is assumed to be planar so that the position
+										of the satellite is given by the time varying polar coordinates \( (r(t), \theta(t)) \),
+										with the origin of the coordinate system at the centre of the earth. In the Newtonian
+										model the motion satisfies the nonlinear differential equations 
+										$$ \frac{d^2 r}{d t^2} - r \left( \frac{d \theta}{d t} \right)^2 = - \frac{GM}{r^2},$$
+										$$ \frac{1}{r} \frac{d}{dt} \left( r^2 \frac{d \theta}{d t} \right) = 0, $$
+										where \( G \) is the universal gravitational constant and \( M \) is the mass of the earth.
+										These equations arise from the conservation of linear and angular momentum and are 
+										difficult to solve in general.  
+									</p>
+
+									<p>
+										An obvious solution to the above set of differential equations is a circular orbit 
+										\( r = r_0 \) where \( r_0 \) is a constant. Substituting this solution into the second
+										differential equation we find that 
+										$$ \frac{d \theta}{d t} = \frac{h}{r_0^2} = \omega, $$
+										where \( h \) is a constant equal to the angular momentum and \( \omega \) is the angular 
+										frequency. Then the first differential equation suggests the relation \( r_0^3 \omega^2 = GM \)
+										which is Kepler's third law of planetary motion. This simple circular motion is all 
+										well and good but we want to know how this orbit will react when perturbed slightly as this 
+										will suggest how stable the orbit is. 
+ 									</p>
+
+									<h3>Regular perturbation expansion</h3>
+
+									<p>
+										Which shall assume that the spacecraft is given some small radial velocity \( \epsilon v \)
+										where \( \epsilon \ll 1 \), so the angular momentum \( h \) remains constant. The radial 
+										coordinate and the angular frequency are then given in the expanded form 
+										$$ r(t) = r_0 + \epsilon r_1(t) + \ldots, $$
+										$$ \frac{d \theta}{d t} = \omega + \epsilon \frac{d}{d t}\left( \theta_1(t) \right) + \ldots. $$
+										Substituting these expansions into our differential equations gives
+										$$ \epsilon \frac{d^2 r_1}{d t^2} + \ldots - \left( r_0 + \epsilon r_1 + \ldots \right) \left( \omega + \epsilon \frac{d \theta_1}{d t} + \ldots \right)^2 = -\frac{GM}{\left( r_0 + \epsilon r_1 + \ldots \right)^2}, $$
+										$$ \left( r_0 + \epsilon r_1 + \ldots \right)^2 \left( \omega + \epsilon \frac{d \theta_1}{d t} + \ldots \right) = h = r_0^2 \omega. $$
+									</p>
+
+									<p>
+										Using Newton's binomial theorem the right-hand side term in the first equation may be written as  
+										$$ \begin{align} -\frac{GM}{\left( r_0 + \epsilon r_1 + \ldots \right)^2} =& -\frac{GM}{r_0^2 
+											\left( 1 + \frac{\epsilon r_1}{r_0} + \ldots \right)^2} \\ =& - \frac{GM}{r_0^2} \left( 1 - \frac{2 \epsilon r_1}{r_0} + O(\epsilon^2) \right) 
+											\\ =& - r_0 \omega^2 + 2 \epsilon \omega^2 r_1 + O(\epsilon^2), \end{align} $$
+										since \( r_0^3 \omega^2 = GM \). So expanding the left-hand side of the equation too we find that 
+										$$ \epsilon \frac{d^2 r_1}{d t^2} - r_0 \omega^2 - \epsilon \omega^2 r_1 - 2 \epsilon r_0 \omega \frac{d \theta_1}{d t} =  - r_0 \omega^2 + 2 \epsilon \omega^2 r_1 + O(\epsilon^2). $$
+										Similarly expanding the second equation we have
+										$$ r_0^2 \omega + 2 \epsilon r_0 r_1 \omega + \epsilon r_0^2 \frac{d \theta_1}{d t} = r_0^2 \omega + O(\epsilon^2).  $$
+										Cleary these equations are satisfied at leading order then \( O(\epsilon) \) we have two 
+										differential equations, governing the first-order perturbation, given by
+										$$ \frac{d^2 r_1}{d t^2} - 3 \omega^2 r_1 - 2 r_0 \omega \frac{d \theta_1}{d t} = 0, $$
+										$$ 2 r_0 r_1 \omega + r_0^2 \frac{d \theta_1}{d t} = 0 \Rightarrow \frac{d \theta_1}{d t} = -\frac{2 r_1 \omega}{r_0}. $$
+										Substituting the second equation into the first we find that 
+										$$ \frac{d^2 r_1}{d t^2} + \omega^2 r_1 = 0. $$ This is the equation for simple harmonic
+										motion and has a solution of the form 
+										$$ r_1(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t), $$
+										where \( c_1 \) and \( c_2 \) are constants. This solution for \( r_1 \) implies that 
+										$$ \begin{align} \theta_1 =& - \frac{2 \omega}{r_0} \int r_1(t) dt \\
+										=& \frac{2}{r_0} \left[ c_2 \cos(\omega t) - c_1 \sin(\omega t) \right] + \text{constant}. \end{align} 
+										$$ 
+									</p>
+
+									<h3>Conclusions</h3>
+
+									<p>
+										Since \( r_1(t) \) oscillates without growing or decaying the orbit is stable to
+										small velocity perturbations. The frequency of the oscillation is equal to the original 
+										frequency of the circular orbit, this means that the perturbed orbit is slightly elliptical
+										with the centre of the earth at one focus. So we don't need to worry about our satellite 
+										being thrown out into space or crashing into the earth due to small changes in their velocity. 
+									</p>
+
+									<p>
+										Asymptotic techniques offer useful insights into 
+										many complex problems by simplifying the governing equations. This simple example 
+										is a regular expansion which is uniformly valid, this is not always the case 
+										as in some situations the asymptotic scaling may break down in certain regions of the domain.
+										By rescaling the equations to find solutions in different regions and matching across the
+										domain this difficulty can be overcome. Many fluid mechanics problems can be tackled 
+										using asymptotic techniques along with problems involving coexisting slow and fast timescales 
+										such as biological processes, chemical reactions and mechanical systems. 
+									</p>
+									
+								</header>
+							</section>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="container">
+						<div id="copyright">
+							<ul>
+								<li>&copy; Oak Hamilton Limited</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
