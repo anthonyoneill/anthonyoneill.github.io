@@ -2,7 +2,7 @@
 <html lang="en-US" dir="ltr">
 <head>
 
-  <title>Anthony O'Neill</title>
+  <title>Notes on Numbers</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,169 +11,97 @@
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://anthonyoneill.github.io">
-  <!--link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg">
-  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png"-->
 </head>
 <body>
 
 
 <header>
-  <h1>Anthony O'Neill</h1>
-  <p>
-    I am an applied mathematician and software engineer with a passion for
-    building accurate and efficient systems. I have a strong background in fluid mechanics,
-    numerical methods, and scientific computing. I am skilled in a variety of programming languages
-    and technologies, including Rust, C++ and Python.    
-  </p>
+  <h1>Notes on Numbers</h1>
 </header>
 
 <hr>
 
-<section>
-  <h2>Experience</h2>
-
-  <ol style="list-style: none;">
-    <li>
-      <details>
-        <summary><b>Senior Software Engineer</b> <em>Flite Software NI</em>  [ November 2020 - Present ]</summary>
-        <p>
-          I currently work for <a href="https://fluidflowinfo.com">Flite Software NI</a> as a senior software engineer.
-          My role involves developing mathematical models, algorithms and software for modelling transient 
-          fluid flow in complex pipe networks. I have devised a new algorithm for modelling transient 
-          flows in fluid networks using discrete calculus and Newton iteration, implemented it in 
-          <a href="https://www.rust-lang.org/">Rust</a> and deployed it to an 
-          <a href="https://actix.rs/">Actix Web</a> server. At the moment I am working to improve
-          system by implementing additional components and including convective effects in the 
-          governing equations.
-        </p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><b>Research Associate</b> <em>University of Manchester</em> [ November 2018 - November 2020 ]</summary>
-        <p>
-          I worked in the <a href="https://www.se.manchester.ac.uk/about/schools-and-departments/school-of-engineering/">School of Engineering</a> 
-          investigating quantum numerical algorithms for use in simulating physical systems. The project 
-          aimed to identify and modify numerical algorithms for use with quantum computing systems with 
-          particular regard for the modelling and simulation of fluids. I worked as part of the 
-          <a href="https://sph-manchester.weebly.com/">smoothed particle hydrodynamics group</a> 
-          where I presented updates on my research in weekly team meetings.
-          I lead a course on numerical methods and computing for undergraduate civil engineering students.
-          Participated in conferences (<a href="http://spheric2019.co.uk/">SPHERIC 2019</a> and 
-          SPH@Manchester 2020).
-        </p>
-        <ul>
-          <li>
-            <a href="https://arxiv.org/abs/2006.06719v2">
-              Williams, A.J. and Lind, S.J., 2020. A Quantum Computing Algorithm for Smoothed
-              Particle Hydrodynamics. arXiv preprint arXiv:2006.06719
-            </a>
-          </li>
-          <p> </p>
-          <li>
-            <a href="https://doi.org/10.1016/j.cpc.2023.108909">Au-Yeung, R., Williams, A., Kendon, V. and Lind, S., Quantum Algorithm for Smoothed
-                Particle Hydrodynamics. Computer Physics Communications, 2024. Volume 294, 108909.
-            </a>
-          </li>
-        </ul>
-        <p></p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><b>Data Analyst</b> <em>Education and Skills Funding Agency</em> [ September 2018 - November 2018 ]</summary>
-        <p>
-          Working for an executive agency of the Department of Education I helped develop data models and risk
-          assesment tools for determining funding and financial risk using R and PowerBI.
-        </p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><b>PhD in Applied Mathematics</b> <em>University of Manchester</em> [ September 2015 - September 2018 ]</summary>
-        <p>
-          I worked on a PhD project investigating boundary layers in three-dimensional parabolic flows. The
-          project used analytic, asymptotic and computational techniques to assess the impact of surface
-          deviations or wall transpiration on boundary layer development. I Developed a 
-          <a href="https://github.com/tonywilliams1990/TSL">libraray</a> of code 
-          (C++), based on <a href="https://hewitt.github.io/">Rich Hewitt's</a> library 
-          <a href="https://github.com/hewitt/CppNoddy">CppNoddy</a>, for the numerical solution of 
-          equations modelling fluid flow including both large sparse linear systems and eigenvalue 
-          problems (using <a href="https://petsc.org/release/">PETSc</a> and 
-          <a href="https://slepc.upv.es/">SLEPc</a>). I used <a href="https://www.python.org/">Python</a> 
-          and <a href="https://matplotlib.org/">Matplotlib</a> extensively for
-          data analysis and visualisation. 
-        </p>
-        <ul>
-          <li>
-            <a href="https://doi.org/10.1017/jfm.2017.288">
-              Hewitt, R.E., Duck, P.W. and Williams, A.J., 2017. Injection into boundary layers:
-              solutions beyond the classical form. Journal of Fluid Mechanics, 822, pp.617-639.
-            </a>
-          </li>
-          <p> </p>
-          <li>
-            <a href="http://dx.doi.org/10.1007/s10665-017-9933-7">
-              Williams, A.J. and Hewitt, R.E., 2017. Micro-slot injection into a boundary layer driven
-              by a favourable pressure gradient. Journal of Engineering Mathematics, 107(1), pp.19-35.
-            </a>
-          </li>
-          <p> </p>
-          <li>
-            <a href="https://www.research.manchester.ac.uk/portal/en/theses/boundarylayer-flows-with-shortscale-spanwise-disturbances(4c50004f-5f0c-4252-9adb-680d18cb36e1).html">
-              Williams, A.J., 2018. Boundary-layer flows with short-scale spanwise disturbances. The
-              University of Manchester (United Kingdom)
-            </a>
-          </li>
-        </ul>
-        <p></p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><b>Risk Assessment Scientist</b> <em>Health and Safety Laboratory</em> [ April 2015 - September 2015 ]</summary>
-        <p>
-          I developed gas dispersion modelling tools as part of the Mathematical Sciences Unit. I 
-          developed a number of coded solutions using Visual Basic and C++ for use in risk assessments.
-          I created, coded and tested mathematical models for weather conditions and water 
-          reactive substances.
-        </p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary><b>MSc in Applied Mathematics with Industrial Modelling</b> <em>University of Manchester</em> [ September 2013 - September 2014 ]</summary>
-        <p>
-          I completed a dissertation sponsored by 
-          <a href="https://www.baesystems.com/en/what-we-do/sea/submarines">BAE Systems</a> on the 
-          emergency blowing of submarine ballast tanks using high pressure air which included a 
-          numerical simulation implemented in MATLAB.
-          I developed a range of skills for mathematical modelling through modules in Stability Theory, 
-          Continuum Mechanics, Mathematical Methods and Non-linear Waves.
-          I was Nominated for postgraduate student of the year within the faculty of Engineering and 
-          Physical Sciences.
-        </p>
-      </details>
-    </li>
-    <!--li>
-      <details>
-        <summary><b>Job</b> <em>Employer</em> [ Dates ]</summary>
-        <p>Details</p>
-      </details>
-    </li-->
-  </ol>
-</section>
-
-<!--hr>
-
-<section>
-  <h2>Projects</h2>
-  <p>
-    TODO - Software projects to showcase skills. 
-  </p>
-</section-->
+<ol>
+  <li><b><a href="natural/index.html">Natural</a></b>
+    <ol>
+      <li><i><a href="natural/addition_and_multiplication.html">Addition and multiplication</a></i>
+        <ol>
+          <li><a href="#">Associative, commutative and distributive laws</a></li>
+          <li><a href="#">Powers</a></li>
+        </ol>
+      </li>
+      <li><i><a href="#">Divisibility and prime numbers</a></i>
+        <ol>
+          <li><a href="#">Infinitely many primes</a></li>
+          <li><a href="#">Fundamental theorem of arithmetic</a></li>
+        </ol>
+      </li>
+      <li><i><a href="#">Greatest common divisor</a></i></li>
+      <li><i><a href="#">Least common multiple</a></i></li>
+      <li><i><a href="#">Division with remainder</a></i></li>
+      <li><i><a href="#">Sequences and series</a></i>
+        <ol>
+          <li><a href="#">Sum of Natural numbers</a></li>
+          <li><a href="#">Arithmetic progressions</a></li>
+          <li><a href="#">Polygonal numbers</a></li>
+          <li><a href="#">Sum of triangular numbers</a></li>
+          <li><a href="#">Sum of square numbers</a></li>
+          <li><a href="#">Faulhaber's formula</a></li>
+          <li><a href="#">Pascal's triangle</a></li>
+          <li><a href="#">Fibonacci numbers</a></li>
+        </ol>
+      </li>  
+    </ol>
+  </li>
+  <li><b><a href="integer/index.html">Integer</a></b>
+    <ol>
+      <li><i>Integer section 1</i></li>
+      <li><i>Integer section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Rational</b>
+    <ol>
+      <li><i>Rational section 1</i></li>
+      <li><i>Rational section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Real</b>
+    <ol>
+      <li><i>Real section 1</i></li>
+      <li><i>Real section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Hyperreal</b>
+    <ol>
+      <li><i>Hyperreal section 1</i></li>
+      <li><i>Hyperreal section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Complex</b>
+    <ol>
+      <li><i>Complex section 1</i></li>
+      <li><i>Complex section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Hypercomplex</b>
+    <ol>
+      <li><i>Hypercomplex section 1</i></li>
+      <li><i>Hypercomplex section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Quaternion</b>
+    <ol>
+      <li><i>Quaternion section 1</i></li>
+      <li><i>Quaternion section 2</i></li>
+    </ol>
+  </li>
+  <li><b>Hyperquaternion</b>
+    <ol>
+      <li><i>Hyperquaternion section 1</i></li>
+      <li><i>Hyperquaternion section 2</i></li>
+    </ol>
+  </li>
+</ol>  
 
 <footer>
   <hr>
