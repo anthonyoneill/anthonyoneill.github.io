@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://anthonyoneill.github.io">
+  <link rel="stylesheet" href="../styles.css">
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -20,20 +21,97 @@
   <nav>
     <a href="./index.html">Previous</a>
     <a href="../index.html">Home</a>
-    <a href="#">Next</a>
+    <a href="./divisibility_and_primes.html">Next</a>
   </nav>
-  <h3>Addition and multiplication</h3>
 </header>
+
+<div class="content">
+<h3>Addition and multiplication</h3>
 
 <hr>
 
 <section id="addition_and_multiplication">
   <p>
-    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-    $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
+    Addition of natural numbers is defined inductively as follows:
+    $$ n + 0 := n, \hspace{0.5cm} n + m^* := (n+m)^*$$
+  </p>
+  <p>
+    i.e.
+    $$ \begin{aligned} 
+      n + 1 &= (n+0)^* = n^* \left( \text{the successor of } n \right), \\ 
+      n + 2 &= (n+1)* = (n^*)^* = n^{**}, \\ 
+      & \hspace{0.25cm} \vdots \\
+      n + m &= n^{* \ldots *} \left( \text{the } m^{th} \text{ successor of } n \right).
+    \end{aligned}$$
+  </p>
+  <p>
+    Similarly, multiplication of natural numbers is defined inductively as follows:
+    $$ n \cdot 0 := 0, \hspace{0.5cm} n \cdot m^* := (n \cdot m) + n$$
+  </p>
+  <p>
+    i.e.
+    $$ \begin{aligned} 
+      n \cdot 1 &= (n \cdot 0) + n = n, \\ 
+      n \cdot 2 &= (n \cdot 1) + n = n + n, \\ 
+      & \hspace{0.25cm} \vdots \\
+      n \cdot m &= n + n + \ldots + n \text{ (m times)}.
+    \end{aligned}$$
   </p>
 </section>
+
+<section id="associative_commutative_distributive_laws">
+  <h4>Associative laws</h4>
+  <p>
+    Addition and multiplication of natural numbers are associative, that is
+    $$ \begin{aligned} 
+      n + (m + p) =& (n + m) + p, \\ 
+      n \cdot (m \cdot p) =& (n \cdot m) \cdot p. 
+    \end{aligned} $$
+  </p>
+
+  <h4>Commutative laws</h4>
+  <p>
+    Addition and multiplication of natural numbers are commutative, that is
+    $$ \begin{aligned} 
+      n + m =& m + n, \\ 
+      n \cdot m =& m \cdot n. 
+    \end{aligned} $$
+  </p>
+
+  <h4>Distributive laws</h4>
+
+  <p>
+    Addition and multiplication of natural numbers are distributive, that is
+    $$ \begin{aligned} 
+      (n + m) \cdot p =& (n \cdot p) + (m \cdot p), \\
+      p \cdot ( n + m) =& (p \cdot n) + (p \cdot m).
+    \end{aligned} $$
+  </p>
+</section>
+
+<section id="powers">
+  <h4>Powers</h4>
+
+  <p>
+    Let \( a \) and \( m \) be two natural numbers then the \( m^{th} \) power of \( a \), \(a^m \),
+    is defined inductively as follows:
+    $$ a^0 := 1, \hspace{0.5cm} a^{m^*} := a^m \cdot a$$
+  </p>
+  <p>
+    i.e.
+    $$ \begin{aligned} 
+      a^1 &= a^0 \cdot a = 1 \cdot a = a, \\ 
+      a^2 &= a^1 \cdot a = a \cdot a, \\ 
+      & \hspace{0.25cm} \vdots \\
+      a^m &= a \cdot a \cdot \ldots \cdot a \text{ (m times)}.
+    \end{aligned}$$
+  </p>
+  <p>
+    Also \( a^m \cdot a^n = a^{m+n} \) and \( \left( a^m \right)^n = a^{m \cdot n} \).
+  </p>
+</section>
+
+</div>
 
 <footer>
   <hr>

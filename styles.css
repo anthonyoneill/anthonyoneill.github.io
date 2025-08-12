@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+body {
+    width: 90%;
+    margin: 60px auto 10px auto; /* add top margin for nav height */
+    max-width: 960px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0px 8px;
+    border-radius: 4px;
+    border: currentColor 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    color: black;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main a:hover {
+    text-decoration: underline;
+}
