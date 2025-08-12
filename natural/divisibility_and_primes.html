@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+
+  <title>Notes on Numbers - Chapter - Section - Sub-section</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="anthonyoneill.github.io is a personal website of Anthony O'Neill.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://anthonyoneill.github.io">
+  <link rel="stylesheet" href="../styles.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+<header>
+  <nav>
+    <a href="./addition_and_multiplication.html">Previous</a>
+    <a href="../index.html">Home</a>
+    <a href="./gcd_lcm_division_with_remainder.html">Next</a>
+  </nav>
+</header>
+
+<div class="content">
+<h3>Divisibility and prime numbers</h3>
+<hr>
+
+<section id="divisibility_and_primes">
+  <p>
+    A natural number \( b \neq 0 \) divides another natural number \( a \) if there exists a natural 
+    number \( c \) such that \( a = b \cdot c \). The statement \( b \) divides \( a \) may be 
+    denoted as \( b \mid a \). For example since \( 12 = 6 \cdot 2 \) it follows that 
+    \( 6 \mid 12 \), that is \( 6 \) divides \( 12 \). The converse statement \( b \) does not 
+    divide \( a \) may be denoted as \( b \nmid a \) i.e. \( 7 \nmid 12 \).
+  </p>
+  <p>
+    We say that \( b \) is a common divisor of \( a_1, a_2 \) if \( b \mid a_1 \) and 
+    \( b \mid a_2 \). A natural number \( p > 1 \) is a prime number if \( p \) has only the 
+    divisors \( 1 \) and \( p \) i.e. \( n \mid p \) if and only if \( n = 1 \) or \( n = p \). For
+    example \( p = 7 \) is a prime number since \( 1 \mid 7 \) and \( 7 \mid 7 \) but \( 2 \nmid 7 \),
+    \( 3 \nmid 7 \), \( 4 \nmid 7 \), \( 5 \nmid 7 \), and \( 6 \nmid 7 \). Every natural number
+    \( a > 1 \) has at least one prime divisor. That is, there exists a prime number \( p \) 
+    such that \( p \mid a \).
+  </p>
+</section>
+
+<section id="infinitely_many_primes">
+  <h4>Infinitely many primes</h4>
+  <p>
+    Suppose that there were not infinetly many prime numbers then there would only finitely many 
+    prime number \( p_1, p_2, \ldots, p_n \). Consider the natural number
+    $$ a := p_1 \cdot p_2 \cdots p_n + 1, $$
+    which is either prime or not. If \( a \) is prime, then there is at least one more prime that 
+    is not in the list, namely, \( a \) itself. If \( a \) is not prime then some prime factor 
+    \( p \) divides \( a \), \( p \mid a \). If \( p \) were one of \( p_1, p_2, \ldots, p_n \) then
+    \( p \mid p_1 \cdot p_2 \cdots p_n \) but also \( p \mid p_1 \cdot p_2 \cdots p_n + 1 \). If 
+    \( p \mid p_1 \cdot p_2 \cdots p_n \) and \( p \mid p_1 \cdot p_2 \cdots p_n + 1 \) then 
+    \( p \mid 1 \), \( p \) divides \( 1 \). Since no prime number divides \( 1 \) it follows that
+    \( p \) cannot be one of \( p_1, p_2, \ldots, p_n \). This means that at least one more prime 
+    number exists beyond the list \( p_1, p_2, \ldots, p_n \). Therefore, there are infinitely many
+    prime numbers.
+  </p>
+</section>
+
+<section id="fundamental_theorem_of_arithmetic">
+  <h4>Fundamental theorem of arithmetic</h4>
+  <p>
+    Every nonzero natural number may be represented as a product of prime powers of distinct prime
+    numbers \( p_1, p_2, \ldots, p_r \) with positive natural numbers \( a_1, a_2, \ldots, a_r \) 
+    as exponents such that
+    $$ a = p_1^{a_1} \cdot p_2^{a_2} \cdots p_r^{a_r}. $$
+    This representation is unique up to the order of the prime factors. For example,
+    \( 60 = 2^2 \cdot 3^1 \cdot 5^1 \)
+  </p>
+</section>  
+
+</div><!-- End of content -->
+
+<footer>
+  <hr>
+  <p>
+    <small>
+      © Anthony O'Neill. All rights reserved.
+    </small>
+  </p>
+
+</footer>
+
+</body>
+</html>
