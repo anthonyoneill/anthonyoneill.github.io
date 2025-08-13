@@ -50,3 +50,7 @@ nav a:hover {
 .main a:hover {
     text-decoration: underline;
 }
+
+ol.lower-roman {
+    list-style-type: lower-roman;
+}

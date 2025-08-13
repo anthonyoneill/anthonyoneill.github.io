@@ -21,21 +21,71 @@
   <nav>
     <a href="./divisibility_and_primes.html" class="previous">Previous</a>
     <a href="../index.html" class="home">Home</a>
-    <a href="#" class="next">Next</a>
+    <a href="./sequences_and_series.html" class="next">Next</a>
   </nav>
 </header>
 
 <div class="content">
-<h3>Section title</h3>
-  <!--h4>Sub-section title</h4-->  
+<h3>GCD, LCM and division with remainder</h3> 
 <hr>
 
-<section id="section-id">
+<section id="greatest_common_divisor">
+  <h4>Greatest common divisor</h4>
   <p>
-    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-    $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
+    The greatest common divisor of natural numbers \( a \) and \( b \), at least one of which is 
+    non-zero, is the greatest natural number \( d \) such that \( d \) is a divisor of both \( a \)
+    and \( b \).
   </p>
+  <ol class="lower-roman">
+    <li>
+      \( d \mid a \) and \( d \mid b \); that is, \( d \) is a common divisor of \( a \) and \( b \);
+    </li>
+    <li>
+      \( x \mid d \) for all \( x \in \mathbb{N} \) such that \( x \mid a \) and \( x \mid b \); 
+      that is, every common divisor of \( a \) and \( b \) is also a divisor of \( d \).
+    </li>
+  </ol>
+  <p>
+    For example the divisors of 54 are \( 1, 2, 3, 6, 9, 18, 27, 54 \) and the divisors of \( 24 \)
+    are \( 1, 2, 3, 4, 6, 8, 12, 24 \). Therefore the common divisors of \( 54 \) and \( 24 \) are
+    \( 1, 2, 3, 6 \) and the greatest common divisor of \( 54 \) and \( 24 \) is \( 6 \),
+    \( gcd(54,24) = 6 \). 
+  </p>
+</section>
+<section id="least_common_multiple">
+  <h4>Least common multiple</h4>
+  <p>
+    The least common multiple of two nonzero natural numbers \( a \) and \( b \), denoted 
+    \( lcm(a,b) \), is the smallest natural number \( m \) that is divisible by both \( a \) and 
+    \( b \) i.e.
+  </p>
+  <ol class="lower-roman">
+    <li>
+      \( a \mid m \) and \( b \mid m \); that is, \( m \) is a common multiple of \( a \) and \( b \);
+    </li>
+    <li>
+      \( m \mid y \) for all \( y \in \mathbb{N} \) with \( a \mid y \) and \( b \mid y \); that is,
+      every common multiple of \( a \) and \( b \) is a multiple of \( m \).
+    </li>
+  </ol>
+  <p>
+    For example \( lcm(4, 6) = 12 \) since the multiples of \( 4 \) are \( 4, 8, 12, 16, \ldots \) 
+    and the multiples of \( 6 \) are \( 6, 12, 18, \ldots \), the common multiples of \( 4 \) and 
+    \( 6 \) are \( 12, 24, 36, \ldots \). The smallest number in this list is \( 12 \) therefore 
+    \( lcm(4, 6) = 12 \).
+  </p>
+</section>
+<section id="division_with_remainder">
+  <h4>Division with remainder</h4>
+  <p>
+    If \( a \) and \( b \) are natural numbers with \( b < a \) then, considering the multiples
+    \( 1 \cdot b, 2 \cdot b, 3 \cdot b, \ldots \), there is some multiple of \( b \) which is 
+    greater than \( a \). This means that there exists natural numbers \( q \) and \( r \) such that
+    $$ a = q \cdot b  + r, $$
+    with \( 0 \leq r < b \). This is the division of \( a \) by \( b \) with quotient \( q \) and 
+    remainder \( r \). If \( r = 0 \), then \( b \) is a divisor of \( a \).
+  </p>
+  <!-- TODO could put a diagram here p6 blue commonplace book-->
 </section>
 </div><!-- End of content -->
 
