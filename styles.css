@@ -10,7 +10,7 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    background-color: lightgray;
+    background-color: transparent;
     z-index: 1000;
     padding: 10px 0;
 }

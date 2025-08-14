@@ -19,9 +19,9 @@
 
 <header>
   <nav>
-    <a href="#" class="previous">Previous</a>
+    <a href="./gcd_lcm_division_with_remainder.html" class="previous">Previous</a>
     <a href="../index.html" class="home">Home</a>
-    <a href="#" class="next">Next</a>
+    <a href="../integer/index.html" class="next">Next</a>
   </nav>
 </header>
 
@@ -29,15 +29,24 @@
 <h3>Sequences and series</h3> 
 <hr>
 
+
+
 <section id="sum_of_natural_numbers">
   <h4>Sum of natural numbers</h4>
   <p>
-    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-    $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
+    The sum \( S_n \) of the first \( n \) natural numbers may be wrriten as 
+    $$\begin{aligned} S_n =& 1 + 2 + 3 + \ldots + n-2 + n-1 + n \hspace{0.5cm} \text{or} \\
+    S_n =& n + n-1 + n-2 + \ldots + 3 + 2 + 1.
+    \end{aligned}$$
+    Therefore
+    $$\begin{aligned}
+    2 S_n =& n+1 + n+1 + n+1 + \ldots + n+1 + n+1 + n+1 \\
+    =& n(n+1). \\
+    \end{aligned}$$
+    Which implies that
+    $$S_n = \frac{1}{2}n(n+1) = \triangle_n,$$
+    where \( \triangle_n \) is the \( n \)-th triangular number.
   </p>
-
-  <p> \( \triangle \square \char"2B20 \char"2B21  \)</p>
 
   <table>
     <tr>
@@ -202,6 +211,628 @@
 
 </section>
 
+<section id="arithmetic_progressions">
+  <h4>Arithmetic progressions</h4>
+  <p>
+    An arithmetic progression, with first term \( a \), is a sequence of numbers in which the 
+    difference between consecutive terms is a constant \( d \) known as the common difference i.e. 
+    $$a, a+d, a+2d, a+3d, \ldots.$$ The \( r^{\text{th}} \) term of the sequence is given by 
+    $$ u_r = a + (r-1)d. $$
+  </p>
+  <p>
+    The sum \( S_n \) of the first \( n \) terms of an arithmetic progression may be written as 
+    $$ S_n = a + a+d + a+2d + \ldots + l-2d + l-d + l,$$ where the last term \( l \) is given by 
+    \( l = a + (n-1)d \). The sum of the first \( n \) terms may also be written as
+    $$ S_n = l + l-d + l-2d + \ldots + a+2d + a+d + a.$$ Therefore
+    $$\begin{aligned} 
+      2 S_n =& a+l + a+l + a+l + \ldots + a+l + a+l + a+l \\
+      =& n(a+l).
+    \end{aligned}$$
+    This implies that
+    $$\begin{aligned} 
+      S_n =& \frac{1}{2}n(a+l) = \frac{1}{2}n\left(a + a + (n-1)d \right) \\
+      =& \frac{1}{2}n(2a + (n-1)d).
+    \end{aligned}$$
+    For example the sum \( S = 1 + 3 + 5 + 7 + 9 + 11 \) has \( a = 1 \), \( d = 2 \) and \( n = 6 \), 
+    therefore $$ S = \frac{1}{2} \cdot 6 \left( 2 + 5 \cdot 2 \right) = 3 \cdot 12 = 36. $$
+  </p> 
+</section>
+
+<section id="polygonal_numbers">
+  <h4>Polygonal numbers</h4>
+  <p>
+    As we saw earlier $$ 1 + 2 + 3 + 4 + \ldots + n = \frac{1}{2} n (n+1) = \triangle_n $$ gives the 
+    \( n \)-th triangular number.
+  </p>
+  <p>
+    The sum of the first \( n \) terms of the arithmetic progress with first term \( 1 \) and common 
+    difference \( 2 \) gives the \( n \)-th square number since 
+    $$ 
+      1 + 3 + 5 + 7 + \ldots + 2n-1 = \\ 
+      \frac{1}{2} n \left( 2 + (n-1) \cdot 2 \right) = \frac{1}{2} n (2n) = n^2 = \square_n.
+    $$
+  </p>
+  <table>
+    <tr>
+      <th colspan="3">\( \square_1 = 1 \)</th>
+      <th colspan="3">\( \square_2 = 4 \)</th>
+      <th colspan="4">\( \square_3 = 9 \)</th>
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <th colspan="4">\( \square_4 = 16 \)</th>
+      <th colspan="6">\( \square_5 = 25 \)</th>
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+  </table>
+  <p>
+    The sum of the first \( n \) terms of the arithmetic progress with first term \( 1 \) and common 
+    difference \( 3 \) gives the \( n \)-th pentagonal number since 
+    $$ 
+      1 + 4 + 7 + 10 + \ldots + 3n-2 = \\ 
+      \frac{1}{2} n \left( 2 + (n-1) \cdot 3 \right) = \frac{1}{2} n (3n-1) = \char"2B20_n.
+    $$
+  </p>
+  <table>
+    <tr>
+      <th colspan="3">\( \char"2B20_1 = 1 \)</th>
+      <th colspan="5">\( \char"2B20_2 = 5 \)</th>
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>   
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <th colspan="9">\( \char"2B20_3 = 12 \)</th>
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+  </table>
+  <p>
+    The sum of the first \( n \) terms of the arithmetic progress with first term \( 1 \) and common 
+    difference \( 4 \) gives the \( n \)-th hexagonal number since 
+    $$ 
+      1 + 5 + 9 + 13 + \ldots + 4n-3 = \\ 
+      \frac{1}{2} n \left( 2 + (n-1) \cdot 4 \right) = n (2n-1) = \char"2B21_n.
+    $$
+  </p>
+  <table>
+    <tr>
+      <th colspan="3">\( \char"2B21_1 = 1 \)</th>
+      <th colspan="6">\( \char"2B21_2 = 6 \)</th>
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <th colspan="9">\( \char"2B21_3 = 15 \)</th>
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+    <tr>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="dot"></span></td>
+      <td><span class="space"></span></td>
+      <td><span class="space"></span></td>  
+    </tr>
+  </table>
+  <p>
+    The sum of the first \( n \) terms of the arithmetic progress with first term \( 1 \) and common 
+    difference \( p - 2 \) gives the \( n \)-th \( p \)-sided polygonal number since 
+    $$ 
+      1 + p-1 + 2p -3 + \ldots + (p-2)n-(p-3) = \\ 
+      \frac{1}{2} n \left( 2 + (n-1) \cdot (p-2) \right) = \frac{1}{2} p n (n-1) - n(n-2) = P_n.
+    $$
+  </p>
+</section>
+
+<section id="sum_of_triangular_numbers">
+  <h4>Sum of triangular numbers</h4>
+  <p>
+    The sum of the first \( n \) triangular numbers is 
+    $$ S_n = 1 + 3 + 6 + \ldots + \frac{(n-2)(n-1)}{2} + \frac{(n-1)n}{2} + \frac{n(n+1)}{2}$$ such
+    that \( S_1 = 1 \), \( S_2 = 4 \), \( S_3 = 10 \), \( S_4 = 20 \) and so on. This means that
+    $$ 2 S_n = 2 + 6 + 12 + \ldots + (n-2)(n-1) + (n-1)n + n(n+1). $$ Also, since \( \triangle_n 
+    = n + \triangle_{n-1} \),
+    $$ \begin{aligned}
+      S_n =& \triangle_n + \triangle_{n-1} + \triangle_{n-2} + \ldots + \triangle_3 + \triangle_2 + \triangle_1, \\
+      =& n + 2 \triangle_{n-1} + \triangle_{n-2} + \ldots + \triangle_3 + \triangle_2 + \triangle_1, \\
+      =& n + 2(n-1) + 3 \triangle_{n-2} + \ldots + \triangle_3 + \triangle_2 + \triangle_1, \\
+      & \hspace{2cm} \vdots \\
+      =& n + 2(n-1) + 3(n-2) + \ldots + (n-2) \cdot 3 + (n-1) \cdot 2 + n \cdot 1. \\
+    \end{aligned}$$
+    Therefore 
+    $$ \begin{aligned}
+      3 S_n =& n+2 + 2(n+2) + 3(n+2) + \ldots + (n-2)(n+2) + (n-1)(n+2) + n(n+2), \\
+      =& (n+2)\left[1 + 2 + 3 + \ldots + (n-2) + (n-1) + n \right] \\
+      =& (n+2) \triangle_n.
+    \end{aligned}$$
+    This implies that
+    $$ S_n = \frac{1}{3}(n+2) \triangle_n = \frac{1}{6} n(n+1)(n+2) = \text{Tet}_n, $$
+    where \( \text{Tet}_n \) is the \( n \)-th tetrahedral number.
+  </p>
+</section>
+
+<section id="sum_of_square_numbers">
+  <h4>Sum of square numbers</h4>
+  <p>
+    The sum of the first \( n \) square numbers is 
+    $$ S_n = 1 + 4 + 9 + \ldots + (n-2)^2 + (n-1)^2 + n^2 = \sum_{k=1}^n k^2. $$ 
+    The sum of two consecutive triangular numbers is a square number since
+    $$ \triangle_n + \triangle_{n-1} = \frac{n(n+1)}{2}  + \frac{(n-1)n}{2} = 
+    \frac{1}{2} \left(n^2 + n + n^2 - n \right) = n^2. $$
+    This means we may write the sum of the first \( n \) square numbers as
+    $$\begin{aligned}
+      S_n =& \sum_{k=1}^n k^2 = \sum_{k=1}^n \left( \triangle_k + \triangle_{k-1} \right) 
+      = \sum_{k=1}^n \triangle_k + \sum_{k=1}^n \triangle_{k-1} \\
+      =& \text{Tet}_n + \text{Tet}_{n-1} \\
+      =& \frac{1}{6} n(n+1)(n+2) + \frac{1}{6} (n-1)n(n+1) \\
+      =& \frac{1}{6} n(n+1) \left( n+2 + n-1 \right) \\
+      =& \frac{1}{6} n(n+1)(2n+1) = \text{Pyr}_n,
+    \end{aligned}$$
+    where \( \text{Pyr}_n \) is the \( n \)-th pyramidal number.
+  </p>
+</section>
+
+<section id="faulhabers_formula">
+  <h4>Faulhaber's formula</h4>
+  <p>
+    The sum of the first \( n \) \( p \)-th powers, 
+    $$ S_n = 1^p + 2^p + 3^p + \ldots + n^p = \sum_{k=1}^n k^p, $$ is given by Faulhaber's formula
+    $$ S_n = \frac{1}{p+1} \sum_{r=0}^p \begin{pmatrix} p+1 \\ r \end{pmatrix} B_r n^{p-r+1}, $$
+    where \( \begin{pmatrix} p+1 \\ r \end{pmatrix} \) is the binomial coefficient 
+    $$ \frac{(p+1)!}{r!(p+1-r)!} $$ and \( B_r \) is the \( r \)-th 
+    <a href="https://en.wikipedia.org/wiki/Bernoulli_number" target="_blank">
+      Bernoulli number
+    </a>. 
+  </p>
+  <p>
+    The first few Bernoulli numbers are:
+    $$ 
+    B_0 = 1, \quad B_1 = -\frac{1}{2}, \quad B_2 = \frac{1}{6}, 
+    \quad B_3 = B_5 = B_7 = B_9 \ldots = 0, 
+    \quad B_4 = B_8 = -\frac{1}{30}, \quad B_6 = \frac{1}{42}, \quad B_{10} = \frac{5}{66}, \ldots 
+    $$
+  </p>
+</section>
+
+<section id="pascals_triangle">
+  <h4>Pascal's triangle</h4>
+  <p>
+    Pascal's triangle is a triangular array of numbers in which the \( n \)-th row contains the 
+    coefficients of the binomial expansion of \( (x+y)^n \). The \( r \)-th entry in the \( n \)-th 
+    row is given by the binomial coefficient \( \begin{pmatrix} n \\ r \end{pmatrix} = 
+    \frac{n!}{r!(n-r)!} \). The first few rows of Pascal's triangle are:
+  </p>
+  <table>
+    <tr>
+      <th colspan="13">Pascal's triangle</th>
+      <th>Sum of row</th>
+    </tr>
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+      <td>1</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+      <td>\( 1 = 2^0 \)</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td>
+      <td>1</td><td></td><td>1</td>
+      <td></td><td></td><td></td><td></td><td></td>
+      <td>\( 2 = 2^1 \)</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td></td><td></td>
+      <td>1</td><td></td><td>2</td><td></td><td>1</td>
+      <td></td><td></td><td></td><td></td>
+      <td>\( 4 = 2^2 \)</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td></td>
+      <td>1</td><td></td><td>3</td><td></td><td>3</td><td></td><td>1</td>
+      <td></td><td></td><td></td>
+      <td>\( 8 = 2^3 \)</td>
+    </tr>
+    <tr>
+      <td></td><td></td>
+      <td>1</td><td></td><td>4</td><td></td><td>6</td><td></td><td>4</td><td></td><td>1</td>
+      <td></td><td></td>
+      <td>\( 16 = 2^4 \)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>1</td><td></td><td>5</td><td></td><td>10</td><td>
+      </td><td>10</td><td></td><td>5</td><td></td><td>1</td>
+      <td></td>
+      <td>\( 32 = 2^5 \)</td>
+    </tr>
+    <tr>
+      <td>1</td><td></td><td>6</td><td></td><td>15</td><td></td><td>20
+      </td><td></td><td>15</td><td></td><td>6</td><td></td><td>1</td>
+      <td>\( 64 = 2^6 \)</td>
+    </tr>
+  </table>
+  <p> 
+    The sum of the entries in the \( n \)-th row of Pascal's triangle is the \( n \)-th power of 
+    \( 2 \) that is \( 2^n \). 
+  </p>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>\( \char"2BA6 \)</td><!--td></td><td></td><td></td><td></td><td></td-->
+      <td colspan="5">Natural</td>
+    </tr>
+    <tr>
+      <td>1</td><td>1</td>
+      <td>\( \char"2BA6 \)</td><!--td></td><td></td><td></td><td></td-->
+      <td colspan="4">Triangular</td>
+    </tr>
+    <tr>
+      <td>1</td><td>2</td><td>1</td>
+      <td>\( \char"2BA6 \)</td><!--td></td><td></td><td></td-->
+      <td colspan="3">Tetrahedral</td>
+    </tr>
+    <tr>
+      <td>1</td><td>3</td><td>3</td><td>1</td>
+      <td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>4</td><td>6</td><td>4</td><td>1</td>
+      <td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>5</td><td>10</td><td>10</td><td>5</td><td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>6</td><td>15</td><td>20</td><td>15</td><td>6</td><td>1</td>
+    </tr>
+  </table>
+  <p>The columns of Pascal's triangle list the natural, triangular, tetrahedral etc numbers.</p>
+  <table>
+    <tr>
+      <td></td><td></td><td>1</td>
+      <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td></td><td>\( \char"2197 \)</td><td>1</td>
+      <td>2</td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>\( \char"2197 \)</td><td>\( \char"2197 \)</td><td>3</td><td>5</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>1</td>
+      <td>\( \char"2197 \)</td><td>\( \char"2197 \)</td><td>8</td><td>13</td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>2</td><td>1</td>
+      <td>\( \char"2197 \)</td><td>\( \char"2197 \)</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>3</td><td>3</td><td>1</td>
+      <td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>4</td><td>6</td><td>4</td><td>1</td>
+      <td></td><td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>5</td><td>10</td><td>10</td><td>5</td><td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td><td>6</td><td>15</td><td>20</td><td>15</td><td>6</td><td>1</td>
+    </tr>
+  </table>
+  <p>
+    The sums of the diagonals of Pascal's triangle give the Fibonacci numbers. 
+  </p>
+</section>
+
+<section id="fibonacci_numbers">
+  <h4>Fibonacci numbers</h4>
+  <p>
+    The <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a> 
+    may be defined by the recurrence relation
+    $$ F_0=0, \quad F_1=1 \quad \text{and} \quad F_n = F_{n-1} + F_{n-2}, $$
+    such that \( F_2 = 1 \), \( F_3 = 2 \), \( F_4 = 3 \), \( F_5 = 5 \), \( F_6 = 8 \), etc. This
+    gives the sequence
+    $$ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \ldots $$
+  </p>
+  <p>
+    To find a closed form for \( F_n \) we may try a geometric sequence such that \( F_n = r^n \) 
+    with \(r \neq 0 \). Substituting this into the recurrence relation we find 
+    $$ r^n = r^{n-1} + r^{n-2} \implies r^2 - r - 1 = 0 \implies r = \frac{1 \pm \sqrt{5}}{2}. $$
+  </p>
+  <p>
+    If we let \( \phi = \frac{1}{2} (1+\sqrt{5}) \approx 1.618 \) and 
+    \( \psi = \frac{1}{2} (1-\sqrt{5}) \approx -0.618 \) then generally 
+    $$ F_n = A \phi^n + B \psi^n, $$
+    where \( A \) and \( B \) are constants. To find these constants we use the initial conditions,
+    since \( F_0 = A + B = 0 \) and \( F_1 = A \phi + B \psi = 1 \) it follows that \( B = -A \)
+    and \( A = 1 / \sqrt{5} \) therefore
+    $$ F_n = \frac{1}{\sqrt{5}} \left( \phi^n - \psi^n \right). $$
+  </p>
+  <p>
+    The Fibonacci numbers have the property 
+    $$ \begin{aligned} 
+      F_0 =& F_2 -F_1, \\
+      F_1 =& F_3 -F_2, \\
+      F_2 =& F_4 -F_3, \\
+      & \vdots \\
+      F_n =& F_{n+2} - F_{n+1}. \\
+    \end{aligned}$$
+    Using this property we can write the sum of the first \( n \) Fibonacci numbers as
+    $$ F_0 + F_1 + F_2 + \ldots + F_n = F_{n+2} - F_1 = F_{n+2} - 1. $$
+  </p>
+  <p>
+    The Fibonacci numbers also satisfy the relation
+    $$ \begin{aligned}
+      F_{n+1} - \phi F_n =& \frac{1}{\sqrt{5}} \left( \phi^{n+1} - \psi^{n+1} \right) 
+      - \frac{\phi}{\sqrt{5}} \left( \phi^{n} - \psi^{n} \right) \\
+      =& \psi^n \left( \frac{-\psi + \phi}{\sqrt{5}} \right) = \psi^n.
+    \end{aligned} $$
+    Therefore $$
+      \frac{F_{n+1}}{F_n} - \phi = \frac{\psi^n}{F_n} \implies 
+      \frac{F_{n+1}}{F_n} = \phi + \frac{\psi^n}{F_n}.
+    $$
+    Since \( F_n > 1 \) and \( |\psi| < 1 \) it follows that \( \psi^n / F_n \to 0 \) as 
+    \( n \to \infty \), therefore 
+    $$ \frac{F_{n+1}}{F_n} \to \phi \quad \text{as} \quad n \to \infty. $$
+  </p>
+</section>
 
 </div><!-- End of content -->
 
