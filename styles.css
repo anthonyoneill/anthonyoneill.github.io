@@ -10,7 +10,7 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    background-color: lightgray;
+    background-color: transparent;
     z-index: 1000;
     padding: 10px 0;
 }
@@ -53,4 +53,28 @@ nav a:hover {
 
 ol.lower-roman {
     list-style-type: lower-roman;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.space {
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+table {
+    border-spacing: 0.25em;
+}
+
+th, td {
+    padding: 5px;
 }
